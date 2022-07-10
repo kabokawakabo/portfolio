@@ -73,9 +73,9 @@ const AboutDiv = (
                 height="200"
                 />
             <table>
-            {profileData.data.map(d=>{
+            {profileData.data.map((d,i)=>{
                 const [category, ans, ...rest] = Object.values(d);
-                return (<ProfileDescription category={category} ans={ans} />)
+                return (<ProfileDescription key={i} category={category} ans={ans} />)
             })}
             </table>
         </div>
@@ -124,9 +124,11 @@ const ContactDiv = ()=>{
 const AboutPage: NextPage<GasProfilesData> = (props)=>{
     return (
         <Layout title="About">
-            <h1 className={styles.title}>About</h1>
-            <AboutDiv profileData={props} />
-            <ContactDiv />
+            <div>
+                <h1 className={styles.title}>About</h1>
+                <AboutDiv profileData={props} />
+                <ContactDiv />
+            </div>
         </Layout>
     )
 }

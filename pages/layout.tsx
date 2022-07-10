@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { useRouter } from "next/router";
 
 import Head from "next/head";
@@ -51,14 +51,16 @@ const FooterDiv = ()=>{
 }
 
 
-export default function Layout({children, title}: {children: unknown, title: string}){
+export default function Layout({children, title}: {children: ReactNode, title: string}){
     return (
         <div className={styles.container}>
             <Head>
                 <title>{title}</title>
             </Head>
             <main className={styles.main}>
-                {children}
+                <div>
+                    {children}
+                </div>
                 <div className={mystyles.group}/>
                 <FooterDiv />
             </main>

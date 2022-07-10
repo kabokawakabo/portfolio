@@ -52,13 +52,15 @@ const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
 
     return (
         <Layout title="History">
-            <h1 className={styles.title}>History（技術関連）</h1>
-            {
-                props.data.map(d=>{
-                    const [title, description] = Object.values(d);
-                    return (<HistoryGroup title={title} description={description} />)
-                })
-            }
+            <div>
+                <h1 className={styles.title}>History（技術関連）</h1>
+                {
+                    props.data.map((d, i)=>{
+                        const [title, description] = Object.values(d);
+                        return (<HistoryGroup key={i} title={title} description={description} />)
+                    })
+                }
+            </div>
         </Layout>
     )
 }

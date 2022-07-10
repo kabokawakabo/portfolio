@@ -65,9 +65,9 @@ const WorkCard = (
                 src={image_url}
                 alt="no image" />
               <table>
-                {rest_data.map(d=>{
+                {rest_data.map((d,i)=>{
                     const [category, ans] = d;
-                    return (<ProfileDescription category={category} ans={ans} />)
+                    return (<ProfileDescription key={i} category={category} ans={ans} />)
                 })}
                 <ProfileDescription category="触った期間" ans={`${start_time} 〜 ${end_time}`} />
               </table>
@@ -85,8 +85,8 @@ const HistoryPage: NextPage<GasWorksData> = (props)=>{
         <Layout title="History">
             <h1 className={styles.title}>Work（作品一覧）</h1>
             <div className={styles.grid}>
-                {props.data.map((d: WorkData)=>{
-                    return (<WorkCard data={d} />)
+                {props.data.map((d: WorkData, i)=>{
+                    return (<WorkCard key={i} data={d} />)
                 })}
             </div>
         </Layout>

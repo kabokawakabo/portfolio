@@ -17,6 +17,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout title="Home">
+      <div>
         <h1 className={styles.title}>
           Portfolio (Home)
         </h1>
@@ -56,6 +57,7 @@ const Home: NextPage = () => {
           </Link>
          
         </div>
+      </div>
     </Layout>
   )
 }
