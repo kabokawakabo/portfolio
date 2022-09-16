@@ -54,18 +54,20 @@ const FooterDiv = ()=>{
 
 export default function Layout({children, title}: {children: ReactNode, title: string}){
     return (
-        <div className={styles.container}>
-            <Head>
-                <title>{title}</title>
-            </Head>
-            <main className={styles.main}>
-                <div>
-                    {children}
-                </div>
-                <div className={mystyles.group}/>
-                <FooterDiv />
-                <LoadingPopup />
-            </main>
+        <div>
+            <LoadingPopup />
+            <div className={styles.container}>
+                <Head>
+                    <title>{title}</title>
+                </Head>
+                <main className={styles.main}>
+                    <div>
+                        {children}
+                    </div>
+                    <div className={mystyles.group}/>
+                    <FooterDiv />
+                </main>
+            </div>
         </div>
     )
 }

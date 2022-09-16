@@ -81,10 +81,10 @@
 
 
 .loading_background {
-    position: absolute;
+    position: sticky;/* body戦闘あたりに配置し、scrollを追随する */
     background:rgba(100, 100, 100, 0.9);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 100;
