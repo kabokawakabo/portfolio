@@ -40,14 +40,14 @@ export const getServerSideProps = async(
 ): Promise<GetServerSidePropsResult<GasProfilesData>> =>{
     // サーバサイドで処理してくれる
     const data = await fetchGasData("about");
-    console.log(data);
+    //console.log(data);
     if(data === undefined) return ({notFound: true});
 
     return {props: data};
 }
 
 
-export const ProfileDescription = (
+const ProfileDescription = (
     {category, ans}:
     {category: string,
     ans: string}
@@ -87,15 +87,37 @@ const LinkIcon = (
     {category}:
     {category:"twitter"|"github"|"obserbable"})=>
 {
+    /*
     const [size, setSize] = useState(50);
-    const hovered = ()=>setSize(80);
+    const hovered = ()=>setSize(70);
     const unhovered = ()=>setSize(50);
+    */
+    const [color, setColor] = useState("#000");
+    const hovered = ()=>setColor("#0af");
+    const unhovered = ()=> setColor("#000");  
 
     return (
         <>
-            {category === "twitter"? <SiTwitter size={size} onMouseEnter={hovered} onMouseLeave={unhovered} /> :
-                category === "github"? <SiGithub size={size} onMouseOver={hovered} onMouseLeave={unhovered} /> :
-                <SiObservable size={size} onMouseOver={hovered} onMouseLeave={unhovered} />
+            {category === "twitter"?
+                <SiTwitter
+                    size="50"
+                    color={color}
+                    onMouseEnter={hovered}
+                    onMouseLeave={unhovered}
+                    /> :
+            category === "github"?
+                <SiGithub
+                    size="50"
+                    color={color}
+                    onMouseOver={hovered}
+                    onMouseLeave={unhovered}
+                    /> :
+                <SiObservable
+                    size="50"
+                    color={color}
+                    onMouseOver={hovered}
+                    onMouseLeave={unhovered}
+                    />
             }
         </>
     )
