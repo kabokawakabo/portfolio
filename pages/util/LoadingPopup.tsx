@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import mystyles from "../../styles/mystyle.module.css";
 
 
-export function LoadingPopup() {
+export default function LoadingPopup() {
   const router = useRouter()
   const [pageLoading, setPageLoading] = useState(false)
 

@@ -3,7 +3,7 @@ import type {
     GetServerSidePropsResult,
     NextPage
 } from "next";
-import Head from "next/head";
+//import Head from "next/head";
 
 import styles from "../styles/Home.module.css";
 import mystyles from "../styles/mystyle.module.css";

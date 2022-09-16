@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 
-import { LoadingPopup } from "./util/LoadingPopup";
+import LoadingPopup from "./util/LoadingPopup";
 
 
 import styles from '../styles/Home.module.css'

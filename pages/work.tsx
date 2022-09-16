@@ -72,9 +72,11 @@ const WorkCard = (
         onMouseLeave={unhovered} >
               <h2 style={{color: is_hover? "#0070f3": "black"}}>{title}</h2>
               
-              <img
+              <Image
+                loader={()=>image_url}
                 width="400"
-                src={image_url}
+                height="350"
+                src="me.png"
                 alt="no image" />
               <table>
                 {rest_data.map((d,i)=>{

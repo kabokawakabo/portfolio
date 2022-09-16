@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images:{
     domains: ["drive.google.com"],//読み込めない
-    formats: ["image/webp"],
+    //formats: ["image/webp"],
   },
   /*
   experimental: {
