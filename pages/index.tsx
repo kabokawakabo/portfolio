@@ -30,21 +30,21 @@ const Home: NextPage = () => {
           <Link href="/about">
             <a className={styles.card}>
               <h2>About &rarr;</h2>
-              <p>中の人の生態に迫る？！</p>
+              <p>生態に迫る？！</p>
             </a>
           </Link>   
 
           <Link href="/history">
             <a className={styles.card}>
               <h2>History &rarr;</h2>
-              <p>中の人の経歴を覗き見</p>
+              <p>経歴を覗き見</p>
             </a>
           </Link>
 
           <Link href="/work">
             <a className={styles.card}>
               <h2>Work &rarr;</h2>
-              <p>中の人が作った作品紹介</p>
+              <p>作った作品紹介</p>
             </a>
           </Link>
 
