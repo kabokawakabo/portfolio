@@ -57,7 +57,9 @@ const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
                 {
                     props.data.map((d, i)=>{
                         const [title, description] = Object.values(d);
-                        return (<HistoryGroup key={i} title={title} description={description} />)
+                        return (<HistoryGroup key={i}
+                                    title={title}
+                                    description={description} />)
                     })
                 }
             </div>

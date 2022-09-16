@@ -11,7 +11,7 @@ import styles from "../styles/Home.module.css";
 import mystyles from "../styles/mystyle.module.css";
 import Layout from "./layout";
 
-import { fetchGasData, ProfileDescription } from "./about";
+import { fetchGasData } from "./about";
 
 
 
@@ -27,6 +27,18 @@ export const getServerSideProps = async(
     if(data === undefined) return ({notFound: true});
 
     return {props: data};
+}
+
+const DescriptionLine = (
+    {category, ans}:
+    {category: string, ans: string}
+)=>{
+    return (
+        <tr className={mystyles.tr}>
+            <td className={mystyles.description_category}>{category}</td>
+            <td>{ans}</td>
+        </tr>
+    )
 }
 
 
@@ -67,9 +79,9 @@ const WorkCard = (
               <table>
                 {rest_data.map((d,i)=>{
                     const [category, ans] = d;
-                    return (<ProfileDescription key={i} category={category} ans={ans} />)
+                    return (<DescriptionLine key={i} category={category} ans={ans} />)
                 })}
-                <ProfileDescription category="触った期間" ans={`${start_time} 〜 ${end_time}`} />
+                <DescriptionLine category="触った期間" ans={`${start_time} 〜 ${end_time}`} />
               </table>
               <div>
                 <h4 className={mystyles.work_description_title}>説明:</h4>
