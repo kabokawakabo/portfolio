@@ -77,3 +77,23 @@
 .margin_icon {
     margin: 2rem;
 }
+
+
+
+.loading_background {
+    position: absolute;
+    background:rgba(100, 100, 100, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* 高さは */
+.loading_popup {
+    padding: 60% 0 0 0;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}

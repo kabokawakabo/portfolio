@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 
+import { LoadingPopup } from "./util/LoadingPopup";
 
 
 import styles from '../styles/Home.module.css'
@@ -63,6 +64,7 @@ export default function Layout({children, title}: {children: ReactNode, title: s
                 </div>
                 <div className={mystyles.group}/>
                 <FooterDiv />
+                <LoadingPopup />
             </main>
         </div>
     )
