@@ -13,6 +13,7 @@ import Layout from "./layout";
 
 import { fetchGasData } from "./about";
 import { ChangeReturnToBrFromString } from "./util/AddBrFromString";
+import { DescriptionTr } from "./util/DescriptionTr";
 
 
 
@@ -31,21 +32,6 @@ export const getServerSideProps = async(
 }
 
 
-type DescriptionTrProps = {
-    category: string
-    ans: string
-}
-const DescriptionTr: React.FC<DescriptionTrProps> = ({
-    category,
-    ans
-} )=>{
-    return (
-        <tr className={mystyles.tr}>
-            <td className={mystyles.description_category}>{category}</td>
-            <td>{ans}</td>
-        </tr>
-    )
-}
 
 
 const WorkCard = (

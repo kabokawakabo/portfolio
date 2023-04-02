@@ -15,6 +15,9 @@ import mystyles from "../styles/mystyle.module.css";
 import kabokawakaboPic from "../public/kabokawakabo.jpeg";
 import Layout from './layout';
 
+import { DescriptionTr } from './util/DescriptionTr';
+
+
 
 /*
 const profiles = [
@@ -47,18 +50,7 @@ export const getServerSideProps = async(
 }
 
 
-const ProfileDescription = (
-    {category, ans}:
-    {category: string,
-    ans: string}
-)=>{
-    return (
-        <tr className={mystyles.tr}>
-            <td className={mystyles.left_td}>{category}</td>
-            <td>{ans}</td>
-        </tr>
-    )
-}
+
 const AboutDiv = (
     {profileData}:
     {profileData: GasProfilesData}    
@@ -75,7 +67,11 @@ const AboutDiv = (
             <table>
             {profileData.data.map((d,i)=>{
                 const [category, ans, ...rest] = Object.values(d);
-                return (<ProfileDescription key={i} category={category} ans={ans} />)
+                return (
+                    <DescriptionTr key={i}
+                        category={category}
+                        ans={ans} />
+                )
             })}
             </table>
         </div>
