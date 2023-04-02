@@ -4,15 +4,14 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 
-import LoadingPopup from "./util/LoadingPopup";
 
+import styles from '../../styles/Home.module.css'
+import mystyles from "../../styles/mystyle.module.css";
 
-import styles from '../styles/Home.module.css'
-import mystyles from "../styles/mystyle.module.css";
+//import { useHover } from "../util/hook";
 
-//import { useHover } from "./util/hook";
-
-import { MarginDiv } from "./util/MarginDiv";
+import { MarginDiv } from "../util/MarginDiv";
+import {LoadingBackdrop} from "./LoadingBackdrop";
 
 
 
@@ -87,7 +86,7 @@ const Layout: React.FC<LayoutProps> = ({
 })=>{
     return (
         <div>
-            <LoadingPopup />
+            <LoadingBackdrop />
             <div className={styles.container}>
                 <Head>
                     <title>{title}</title>

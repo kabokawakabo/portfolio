@@ -1,1 +1,1 @@
-type PagePath = "/about" | "/history" | "/work";
+type PagePath = "/" | "/about" | "/history" | "/work";

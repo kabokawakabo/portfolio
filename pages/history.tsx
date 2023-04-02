@@ -7,7 +7,7 @@ import type {
 
 
 import styles from "../styles/Home.module.css";
-import Layout from "./layout";
+import Layout from "./layout/Layout";
 
 import { fetchGasData } from "./api/fetchGasData";
 

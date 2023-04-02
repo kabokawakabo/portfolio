@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 
 
-
-import Layout from './layout';
+import Layout from './layout/Layout';
 import styles from '../styles/Home.module.css';
 
 import { PageLinks } from './elementIndex/PageLinks';
