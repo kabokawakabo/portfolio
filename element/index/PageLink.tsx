@@ -7,7 +7,7 @@ import styles from '../../styles/Home.module.css';
 
 
 type PageLinkProps = {
-    path: string
+    path: PagePath
     title: string
     description: string
 }

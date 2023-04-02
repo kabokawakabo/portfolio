@@ -35,7 +35,7 @@ const useLinkHover = (now_pathname: string)=>{
 
 
 type NavLinkProps = {
-    pathname: string
+    pathname: PagePath
     text: string
 }
 const NavLink: React.FC<NavLinkProps> = ({
@@ -62,13 +62,23 @@ const NavLink: React.FC<NavLinkProps> = ({
 
 
 
+const page_links: NavLinkProps[] = [
+    {pathname: "/", text: "Home"},
+    {pathname: "/about", text: "About"},
+    {pathname: "/history", text: "History"},
+    {pathname: "/work", text: "Work"},
+];
 const FooterDiv: React.FC<{}> = ()=>{
     return (
         <div className={mystyles.footer}>
-            <NavLink pathname="/" text="Home" />
-            <NavLink pathname="/about" text="About" />
-            <NavLink pathname="/history" text="History" />
-            <NavLink pathname="/work" text="Work" />
+            {
+                page_links.map((d, i)=>{
+                    return (
+                        <NavLink key={i}
+                            {...d} />
+                    )
+                })
+            }
         </div>
     )
 }
