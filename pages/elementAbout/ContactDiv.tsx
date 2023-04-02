@@ -27,6 +27,13 @@ const getIconType = (category: IconCategory): IconType=>{
     return SiObservable;
 }
 
+const getHref = (category: IconCategory): string=>{
+    if(category === "twitter") return "https://twitter.com/kabokawakabo";
+    if(category === "github") return "https://github.com/kabokawakabo";
+    
+    return "https://observablehq.com/@vqkrac1fogbevmc"
+}
+
 
 type LinkIconProps = {
     category: IconCategory
@@ -36,13 +43,16 @@ const LinkIcon: React.FC<LinkIconProps> = ({
 })=>{
     const { color, hoveredFC, unhoveredFC } = useIconColor();
     const IconType = getIconType(category);
+    const to = getHref(category);
 
     return (
-        <IconType
-            size="50"
-            color={color}
-            onMouseEnter={hoveredFC}
-            onMouseLeave={unhoveredFC} />
+        <a className={mystyles.margin_icon} href={to}>
+            <IconType
+                size="50"
+                color={color}
+                onMouseEnter={hoveredFC}
+                onMouseLeave={unhoveredFC} />
+        </a>
     )
 }
 
@@ -54,15 +64,9 @@ export const ContactDiv: React.FC<{}> = ()=>{
         <div className={mystyles.group}>
             <h1 className={mystyles.sub_title}>外部Link</h1>
             <div>
-                <a className={mystyles.margin_icon} href="https://twitter.com/kabokawakabo">
-                    <LinkIcon category="twitter" />
-                </a>
-                <a className={mystyles.margin_icon} href="https://github.com/kabokawakabo">
-                    <LinkIcon category="github" />
-                </a>
-                <a className={mystyles.margin_icon} href="https://observablehq.com/@vqkrac1fogbevmc">
-                    <LinkIcon category="observable" />
-                </a>
+                <LinkIcon category="twitter" />
+                <LinkIcon category="github" />
+                <LinkIcon category="observable" />
             </div>
         </div>
     )
