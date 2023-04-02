@@ -1,3 +1,26 @@
+## インポート
+- npm install react-icons --save
+
+## フォルダ構成
+- **pages**
+    - api
+        - GASのスプレッドシートデータ読み出し
+    - ページ関係 (_app、よくわかってない)
+- element
+    - ページ毎に読み出す要素をフォルダ分け
+- styles
+    - mystyle（自作
+    - Home （デフォルトで入っていたもの
+- util
+    - layout
+        - 下部のpageリンク、loadingのbackdrop表示用
+    - 大文字ファイル（ReactComponent
+    - 小文字ファイル（関数, hookなど
+
+
+
+# Next作成時のデフォルトreadme
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
