@@ -7,12 +7,12 @@ import type {
 
 
 import styles from "../styles/Home.module.css";
-import mystyles from "../styles/mystyle.module.css";
 import Layout from "./layout";
 
 import { fetchGasData } from "./api/fetchGasData";
 
-import { ChangeReturnToBrFromString } from "./util/AddBrFromString";
+import { HistoryDiv } from "./elementHistory/HistoryDiv";
+
 
 
 
@@ -29,24 +29,6 @@ export const getServerSideProps = async(
 
 
 
-type HistoryGroupProps = {
-    title: string
-    description: string
-}
-const HistoryGroup: React.FC<HistoryGroupProps> = ({
-    title,
-    description
-})=>{
-    return (
-        <div className={mystyles.group}>
-            <h2 className={mystyles.sub_title}>{title}</h2>
-            <p className={mystyles.description}>
-                <ChangeReturnToBrFromString text={description} />
-            </p>
-        </div>
-    )
-}
-
 
 const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
 
@@ -54,14 +36,7 @@ const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
         <Layout title="History">
             <div>
                 <h1 className={styles.title}>History（技術関連）</h1>
-                {
-                    props.data.map((d, i)=>{
-                        const [title, description] = Object.values(d);
-                        return (<HistoryGroup key={i}
-                                    title={title}
-                                    description={description} />)
-                    })
-                }
+                <HistoryDiv historiesData={props} />
             </div>
         </Layout>
     )
