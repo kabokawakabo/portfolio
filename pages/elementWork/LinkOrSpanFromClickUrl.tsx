@@ -39,7 +39,7 @@ export const LinkOrSpanFromClickUrl: React.FC<LinkOrSpanFromClickUrlProps> = ({
     children
 })=>{
     const is_url = clickUrl.indexOf("http") !== -1;
-    const { color, hoveredFC, unhoveredFC } = useHover();
+    const { color, setHover, setUnhover } = useHover();
 
     
     if(!is_url) return (
@@ -52,8 +52,8 @@ export const LinkOrSpanFromClickUrl: React.FC<LinkOrSpanFromClickUrlProps> = ({
     return (
         <a href={clickUrl}
             className={mystyles.card + " " + mystyles.card_link}
-            onMouseEnter={hoveredFC}
-            onMouseLeave={unhoveredFC}
+            onMouseEnter={setHover}
+            onMouseLeave={setUnhover}
         >
             <WorkTitle
                 title={title}

@@ -31,7 +31,7 @@ type LinkIconProps = {
 const LinkIcon: React.FC<LinkIconProps> = ({
     category,
 })=>{
-    const { color, hoveredFC, unhoveredFC } = useHover();
+    const { color, setHover, setUnhover} = useHover();
     const IconType = getIconType(category);
     const to = getHref(category);
 
@@ -40,8 +40,8 @@ const LinkIcon: React.FC<LinkIconProps> = ({
             <IconType
                 size="50"
                 color={color}
-                onMouseEnter={hoveredFC}
-                onMouseLeave={unhoveredFC} />
+                onMouseEnter={setHover}
+                onMouseLeave={setUnhover} />
         </a>
     )
 }
