@@ -10,6 +10,7 @@ import mystyles from "../styles/mystyle.module.css";
 import Layout from "./layout";
 
 import { fetchGasData } from "./about";
+import { ChangeReturnToBrFromString } from "./util/AddBrFromString";
 
 
 /*
@@ -42,7 +43,9 @@ const HistoryGroup = (
     return (
         <div className={mystyles.group}>
             <h2 className={mystyles.sub_title}>{title}</h2>
-            <p className={mystyles.description}>{description}</p>
+            <p className={mystyles.description}>
+                <ChangeReturnToBrFromString text={description} />
+            </p>
         </div>
     )
 }

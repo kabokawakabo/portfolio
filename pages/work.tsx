@@ -12,6 +12,7 @@ import mystyles from "../styles/mystyle.module.css";
 import Layout from "./layout";
 
 import { fetchGasData } from "./about";
+import { ChangeReturnToBrFromString } from "./util/AddBrFromString";
 
 
 
@@ -29,10 +30,15 @@ export const getServerSideProps = async(
     return {props: data};
 }
 
-const DescriptionLine = (
-    {category, ans}:
-    {category: string, ans: string}
-)=>{
+
+type DescriptionTrProps = {
+    category: string
+    ans: string
+}
+const DescriptionTr: React.FC<DescriptionTrProps> = ({
+    category,
+    ans
+} )=>{
     return (
         <tr className={mystyles.tr}>
             <td className={mystyles.description_category}>{category}</td>
@@ -77,17 +83,23 @@ const WorkCard = (
                 width="400"
                 height="350"
                 src="me.png"
-                alt="no image" />
+                alt={title + "_画像"} />
               <table>
                 {rest_data.map((d,i)=>{
                     const [category, ans] = d;
-                    return (<DescriptionLine key={i} category={category} ans={ans} />)
+                    return (<DescriptionTr key={i}
+                        category={category}
+                        ans={ans} />)
                 })}
-                <DescriptionLine category="触った期間" ans={`${start_time} 〜 ${end_time}`} />
+                <DescriptionTr
+                    category="触った期間"
+                    ans={`${start_time} 〜 ${end_time}`} />
               </table>
               <div>
                 <h4 className={mystyles.work_description_title}>説明:</h4>
-                <p className={mystyles.no_margin}>{description}</p>
+                <p className={mystyles.no_margin}>
+                    <ChangeReturnToBrFromString text={description} />
+                </p>
               </div>
         </a>  
     )
