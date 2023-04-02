@@ -6,18 +6,8 @@ import { SiTwitter, SiGithub, SiObservable } from "react-icons/si";
 
 import mystyles from "../../styles/mystyle.module.css";
 
+import { useHover } from "../util/hook";
 
-
-
-const useIconColor = ()=>{
-    const [color, setColor] = useState("#000");
-    const hoveredFC = ()=>setColor("#0af");
-    const unhoveredFC = ()=> setColor("#000");
-
-    return ({
-        color, hoveredFC, unhoveredFC
-    })
-}
 
 type IconCategory = "twitter"|"github"|"observable";
 const getIconType = (category: IconCategory): IconType=>{
@@ -41,7 +31,7 @@ type LinkIconProps = {
 const LinkIcon: React.FC<LinkIconProps> = ({
     category,
 })=>{
-    const { color, hoveredFC, unhoveredFC } = useIconColor();
+    const { color, hoveredFC, unhoveredFC } = useHover();
     const IconType = getIconType(category);
     const to = getHref(category);
 

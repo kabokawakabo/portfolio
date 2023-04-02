@@ -59,9 +59,9 @@
     border: 1px solid #eaeaea;
     border-radius: 10px;
 }
-.card:hover,
-.card:focus,
-.card:active {
+.card_link:hover,
+.card_link:focus,
+.card_link:active {
   background-color: rgba(60, 124, 203, 0.1);
 }
 
