@@ -7,12 +7,12 @@ import type {
 
 
 import styles from "../styles/Home.module.css";
-import Layout from './layout/Layout';
+import Layout from '../util/layout/Layout';
 
 import { fetchGasData } from "./api/fetchGasData";
 
-import { ProfileDiv } from "./elementAbout/ProfileDiv";
-import { ContactDiv } from "./elementAbout/ContactDiv";
+import { ProfileDiv } from "../element/about/ProfileDiv";
+import { ContactDiv } from "../element/about/ContactDiv";
 
 
 

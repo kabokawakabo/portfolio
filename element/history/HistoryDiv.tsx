@@ -2,7 +2,7 @@
 
 import mystyles from "../../styles/mystyle.module.css";
 
-import { ChangeReturnToBrFromString } from "../util/AddBrFromString";
+import { ChangeReturnToBrFromString } from "../../util/AddBrFromString";
 
 
 

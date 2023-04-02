@@ -1,4 +1,4 @@
-import mystyles from "../../styles/mystyle.module.css";
+import mystyles from "../styles/mystyle.module.css";
 
 
 type DescriptionTrProps = {

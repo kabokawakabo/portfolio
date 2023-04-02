@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 
 
-import Layout from './layout/Layout';
+import Layout from '../util/layout/Layout';
 import styles from '../styles/Home.module.css';
 
-import { PageLinks } from './elementIndex/PageLinks';
-import { MarginDiv } from './util/MarginDiv';
+import { PageLinks } from '../element/index/PageLinks';
+import { MarginDiv } from '../util/MarginDiv';
 
 
 

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import mystyles from "../../styles/mystyle.module.css";
 import kabokawakaboPic from "../../public/kabokawakabo.jpeg";
 
-import { DescriptionTr } from '../util/DescriptionTr';
+import { DescriptionTr } from '../../util/DescriptionTr';
 
 
 

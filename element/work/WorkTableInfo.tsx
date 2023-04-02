@@ -1,6 +1,6 @@
 
 
-import { DescriptionTr } from "../util/DescriptionTr";
+import { DescriptionTr } from "../../util/DescriptionTr";
 
 
 

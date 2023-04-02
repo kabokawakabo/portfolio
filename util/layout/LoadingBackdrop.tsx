@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 import mystyles from "../../styles/mystyle.module.css";
 
-import { allowScroll, disallowScroll } from "../util/scroll";
+import { allowScroll, disallowScroll } from "../scroll";
 
 
 

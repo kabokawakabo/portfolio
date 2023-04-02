@@ -6,7 +6,7 @@ import { SiTwitter, SiGithub, SiObservable } from "react-icons/si";
 
 import mystyles from "../../styles/mystyle.module.css";
 
-import { useHover } from "../util/hook";
+import { useHover } from "../../util/hook";
 
 
 type IconCategory = "twitter"|"github"|"observable";

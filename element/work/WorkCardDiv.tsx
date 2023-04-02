@@ -5,7 +5,7 @@ import styles from "../../styles/Home.module.css";
 import mystyles from "../../styles/mystyle.module.css";
 
 
-import { ChangeReturnToBrFromString } from "../util/AddBrFromString";
+import { ChangeReturnToBrFromString } from "../../util/AddBrFromString";
 
 import { LinkOrSpanFromClickUrl } from "./LinkOrSpanFromClickUrl";
 import { WorkTableInfo } from "./WorkTableInfo";

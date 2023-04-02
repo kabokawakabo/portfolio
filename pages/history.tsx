@@ -7,11 +7,11 @@ import type {
 
 
 import styles from "../styles/Home.module.css";
-import Layout from "./layout/Layout";
+import Layout from "../util/layout/Layout";
 
 import { fetchGasData } from "./api/fetchGasData";
 
-import { HistoryDiv } from "./elementHistory/HistoryDiv";
+import { HistoryDiv } from "../element/history/HistoryDiv";
 
 
 

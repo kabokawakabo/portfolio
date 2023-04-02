@@ -10,7 +10,7 @@ import mystyles from "../../styles/mystyle.module.css";
 
 //import { useHover } from "../util/hook";
 
-import { MarginDiv } from "../util/MarginDiv";
+import { MarginDiv } from "../MarginDiv";
 import {LoadingBackdrop} from "./LoadingBackdrop";
 
 
