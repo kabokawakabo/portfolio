@@ -11,14 +11,14 @@ import styles from "../styles/Home.module.css";
 import mystyles from "../styles/mystyle.module.css";
 import Layout from "./layout";
 
-import { fetchGasData } from "./about";
+import { fetchGasData } from "./api/fetchGasData";
+
 import { ChangeReturnToBrFromString } from "./util/AddBrFromString";
 import { DescriptionTr } from "./util/DescriptionTr";
 
 
 
-type WorkData = ({[key: string]: string});
-type GasWorksData = {data: Array<WorkData>};
+
 
 
 export const getServerSideProps = async(
