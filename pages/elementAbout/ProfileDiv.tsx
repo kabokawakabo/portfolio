@@ -24,11 +24,11 @@ const ProfileImage: React.FC<{}> = ()=>{
 
 type ProfileTableInfoProps = ProfileDivProps
 const ProfileTableInfo: React.FC<ProfileTableInfoProps> = ({
-    profileData
+    profilesData
 })=>{
     return (
         <table>
-            {profileData.data.map((d,i)=>{
+            {profilesData.data.map((d,i)=>{
                 const [category, ans, ...rest] = Object.values(d);
                 return (
                     <DescriptionTr key={i}
@@ -44,16 +44,16 @@ const ProfileTableInfo: React.FC<ProfileTableInfoProps> = ({
 
 
 type ProfileDivProps = {
-    profileData: GasProfilesData
+    profilesData: GasProfilesData
 }
 export const ProfileDiv: React.FC<ProfileDivProps> = ({
-    profileData
+    profilesData
 })=>{
     return (
         <div className={mystyles.group}>
             <h1 className={mystyles.sub_title}>人物紹介</h1>
             <ProfileImage />
-            <ProfileTableInfo profileData={profileData} />
+            <ProfileTableInfo profilesData={profilesData} />
         </div>
     )
 }

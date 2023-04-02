@@ -36,7 +36,7 @@ const AboutPage: NextPage<GasProfilesData> = (props)=>{
         <Layout title="About">
             <div>
                 <h1 className={styles.title}>About</h1>
-                <ProfileDiv profileData={props} />
+                <ProfileDiv profilesData={props} />
                 <ContactDiv />
             </div>
         </Layout>
