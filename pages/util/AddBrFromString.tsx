@@ -1,4 +1,4 @@
-
+import { Fragment } from "react";
 
 
 type ChangeReturnToBrFromStringProps = {
@@ -10,8 +10,12 @@ export const ChangeReturnToBrFromString: React.FC<ChangeReturnToBrFromStringProp
     return (
         <>
             {split_return
-                .map(d=> {
-                    return (<>{d} <br /> </>)
+                .map((d, i)=> {
+                    return (
+                        <Fragment key={i}>
+                            {d} <br />
+                        </Fragment>
+                    )
                 })}
         </>
     )

@@ -10,9 +10,9 @@ import LoadingPopup from "./util/LoadingPopup";
 import styles from '../styles/Home.module.css'
 import mystyles from "../styles/mystyle.module.css";
 
-
 //import { useHover } from "./util/hook";
 
+import { MarginDiv } from "./util/MarginDiv";
 
 
 
@@ -63,17 +63,6 @@ const NavLink: React.FC<NavLinkProps> = ({
 
 
 
-const MarginDiv: React.FC<{}> = ()=>{
-    const style = ({
-        margin: "4rem 0 0 0"
-    })
-
-    return (
-        <div style={style} />
-    )
-}
-
-
 const FooterDiv: React.FC<{}> = ()=>{
     return (
         <div className={mystyles.footer}>
@@ -107,7 +96,7 @@ const Layout: React.FC<LayoutProps> = ({
                     <div>
                         {children}
                     </div>
-                    <MarginDiv />
+                    <MarginDiv tRem={4} />
                     <FooterDiv />
                 </main>
             </div>

@@ -12,6 +12,7 @@ import Layout from "./layout";
 import { fetchGasData } from "./api/fetchGasData";
 
 import { WorkCardDiv } from "./elementWork/WorkCardDiv";
+import { MarginDiv } from "./util/MarginDiv";
 
 
 
@@ -33,6 +34,7 @@ const WorkPage: NextPage<GasWorksData> = (props)=>{
     return (
         <Layout title="History">
             <h1 className={styles.title}>Work（作品一覧）</h1>
+            <MarginDiv tRem={2} />
             <WorkCardDiv worksData={props} />
         </Layout>
     )

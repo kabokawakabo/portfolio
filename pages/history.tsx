@@ -31,7 +31,6 @@ export const getServerSideProps = async(
 
 
 const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
-
     return (
         <Layout title="History">
             <div>
