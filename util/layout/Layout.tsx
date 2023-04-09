@@ -12,18 +12,21 @@ import mystyles from "../../styles/mystyle.module.css";
 import { MarginDiv } from "../MarginDiv";
 import { LoadingBackdrop } from "./LoadingBackdrop";
 
-const useLinkHover = (now_pathname: string) => {
+const useGetColor = (is_hover: boolean, now_pathname: string) => {
     const { pathname } = useRouter();
+
+    if (is_hover) return "#0af";
+    else if (pathname === now_pathname) return "gray";
+    return "black";
+};
+
+const useLinkHover = (now_pathname: string) => {
     const [is_hover, setIsHover] = useState(false);
     const setHover = () => setIsHover(true);
     const setUnhover = () => setIsHover(false);
 
     /// useHoverを利用すると、この処理が難しいので新たな関数にする
-    const color = is_hover
-        ? "#0af"
-        : pathname === now_pathname
-        ? "gray"
-        : "black";
+    const color = useGetColor(is_hover, now_pathname);
 
     return {
         color,
