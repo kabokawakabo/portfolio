@@ -1,29 +1,31 @@
 ## インポート
-- npm install react-icons
-- npm i eslint
-    - デフォルトでインストール済みだったかも？
-- npm install --save-dev eslint-config-prettier
 
+-   npm install react-icons
+-   npm i eslint
+    -   デフォルトでインストール済みだったかも？
+-   npm install --save-dev eslint-config-prettier
+-   npm install --save-dev --save-exact prettier
 
 ## フォルダ構成
-- **pages**
-    - api
-        - GASのスプレッドシートデータ読み出し
-    - ページ関係 (_app、よくわかってない)
-- **element**
-    - ページ毎に読み出す要素をフォルダ分け
-- **styles**
-    - mystyle（自作
-    - Home （デフォルトで入っていたもの
-- **util**
-    - layout
-        - 下部のpageリンク、loadingのbackdrop表示用
-    - 大文字ファイル（ReactComponent
-    - 小文字ファイル（関数, hookなど
 
--- --
+-   **pages**
+    -   api
+        -   GAS のスプレッドシートデータ読み出し
+    -   ページ関係 (\_app、よくわかってない)
+-   **element**
+    -   ページ毎に読み出す要素をフォルダ分け
+-   **styles**
+    -   mystyle（自作
+    -   Home （デフォルトで入っていたもの
+-   **util**
+    -   layout
+        -   下部の page リンク、loading の backdrop 表示用
+    -   大文字ファイル（ReactComponent
+    -   小文字ファイル（関数, hook など
 
-# Next作成時のデフォルトreadme
+---
+
+# Next 作成時のデフォルト readme
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -49,8 +51,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 

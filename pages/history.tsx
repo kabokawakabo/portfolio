@@ -1,10 +1,9 @@
 import type {
     GetServerSidePropsContext,
     GetServerSidePropsResult,
-    NextPage
+    NextPage,
 } from "next";
 //import Head from "next/head";
-
 
 import styles from "../styles/Home.module.css";
 import Layout from "../util/layout/Layout";
@@ -13,24 +12,17 @@ import { fetchGasData } from "./api/fetchGasData";
 
 import { HistoryDiv } from "../element/history/HistoryDiv";
 
-
-
-
-
-export const getServerSideProps = async(
+export const getServerSideProps = async (
     context: GetServerSidePropsContext
-): Promise<GetServerSidePropsResult<GasHistoriesData>> =>{
+): Promise<GetServerSidePropsResult<GasHistoriesData>> => {
     // サーバサイドで処理してくれる
     const data = await fetchGasData("history");
-    if(data === undefined) return ({notFound: true});
+    if (data === undefined) return { notFound: true };
 
-    return {props: data};
-}
+    return { props: data };
+};
 
-
-
-
-const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
+const HistoryPage: NextPage<GasHistoriesData> = (props) => {
     return (
         <Layout title="History">
             <div>
@@ -38,8 +30,7 @@ const HistoryPage: NextPage<GasHistoriesData> = (props)=>{
                 <HistoryDiv historiesData={props} />
             </div>
         </Layout>
-    )
-}
-
+    );
+};
 
 export default HistoryPage;
