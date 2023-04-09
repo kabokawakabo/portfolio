@@ -2,6 +2,7 @@
 - npm install react-icons
 - npm i eslint
     - デフォルトでインストール済みだったかも？
+- npm install --save-dev eslint-config-prettier
 
 
 ## フォルダ構成
