@@ -5,6 +5,9 @@
     -   デフォルトでインストール済みだったかも？
 -   npm install --save-dev eslint-config-prettier
 -   npm install --save-dev --save-exact prettier
+    -   参考資料
+        -   https://nextjs.org/docs/basic-features/eslint
+        -   https://prettier.io/docs/en/install.html
 
 ## フォルダ構成
 
