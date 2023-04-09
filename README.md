@@ -8,18 +8,18 @@
     - api
         - GASのスプレッドシートデータ読み出し
     - ページ関係 (_app、よくわかってない)
-- element
+- **element**
     - ページ毎に読み出す要素をフォルダ分け
-- styles
+- **styles**
     - mystyle（自作
     - Home （デフォルトで入っていたもの
-- util
+- **util**
     - layout
         - 下部のpageリンク、loadingのbackdrop表示用
     - 大文字ファイル（ReactComponent
     - 小文字ファイル（関数, hookなど
 
-
+-- --
 
 # Next作成時のデフォルトreadme
 
