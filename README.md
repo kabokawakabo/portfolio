@@ -1,6 +1,7 @@
 ## インポート
 - npm install react-icons
 - npm i eslint
+    - デフォルトでインストール済みだったかも？
 
 
 ## フォルダ構成
