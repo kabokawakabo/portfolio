@@ -1,5 +1,7 @@
 ## インポート
-- npm install react-icons --save
+- npm install react-icons
+- npm i eslint
+
 
 ## フォルダ構成
 - **pages**
